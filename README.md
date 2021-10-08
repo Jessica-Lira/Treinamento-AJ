@@ -1,12 +1,6 @@
 # 🚀 Treinamento-AJ
 <p>Estrutura de uma aplicação ReactJS, treinamento 08/10.</p>
 
-## 🛠️ Tecnologias 
-
-Esse projeto foi desenvolvido com as seguintes tecnologias:
-
-- [React](https://reactjs.org)
-
 
 ## 🚀 Como executar 
 
