@@ -1,7 +1,7 @@
 export default function Btn(props) { 
 
     function aux() {
-        props.minhaFuncao('ok')
+        props.cliqueBotao('ok')
     }
 
     return  ( 

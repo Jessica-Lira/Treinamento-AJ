@@ -1,10 +1,23 @@
+import { useState } from 'react';
 import './App.css';
 import Btn from './components/button';
+import Input  from './components/input';
 
-export default function App() { 
+export default function App() {
   
-  function mostrarMsg(msg) {
-    console.log("minha msg ==> " + msg);
+  const [ newTodo, setNewTodo ] = useState('');
+  const [ todos, setTodos ] = useState(['teste', 'teste2', 'teste3', 'teste4']);
+
+  const listaLayout = todos.map(todo => (
+    <li> {todo} </li>
+  ))
+  
+  function clickBotao(msg) {
+      setTodos(todos.push(newTodo))
+  }
+
+  function setarTodo(teste){
+    setNewTodo(teste);
   }
 
   return  ( 
@@ -12,10 +25,16 @@ export default function App() {
       <p>Hello world!</p>
       <p>Hello world!</p>
 
+      <Input funcaoTeste={setarTodo}/>
+
       < Btn 
           nome = "titulo"
-          minhaFuncao = {mostrarMsg} 
+          cliqueBotao = {clickBotao} 
       />
+
+    <p>{todos}</p>
+    <ul>{listaLayout}</ul>
+
     </>
   );
 }
